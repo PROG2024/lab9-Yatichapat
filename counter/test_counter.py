@@ -12,12 +12,9 @@ from counter import Counter
 
 
 class TestCounter(unittest.TestCase):
-    def test_singleton_first(self):
+    def test_singleton(self):
         c1 = Counter()
         self.assertEquals(1, c1.count)
-
-    def test_singleton_second(self):
-        c1 = Counter()
         c1.increment()
         c2 = Counter()
         self.assertEquals(2, c2.count)
